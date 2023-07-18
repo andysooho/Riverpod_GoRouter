@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:riverpodv2_gorouter/common/layout/default_layout.dart';
-import 'package:riverpodv2_gorouter/riverpod/screen/future_provider_screen.dart';
-import 'package:riverpodv2_gorouter/riverpod/screen/state_notifier_provider_screen.dart';
-import 'package:riverpodv2_gorouter/riverpod/screen/state_provider_screen.dart';
-import 'package:riverpodv2_gorouter/riverpod/screen/stream_provider_screen.dart';
+import 'package:riverpod_gorouter/common/layout/default_layout.dart';
+import 'package:riverpod_gorouter/riverpod/screen/future_provider_screen.dart';
+import 'package:riverpod_gorouter/riverpod/screen/state_notifier_provider_screen.dart';
+import 'package:riverpod_gorouter/riverpod/screen/state_provider_screen.dart';
+import 'package:riverpod_gorouter/riverpod/screen/stream_provider_screen.dart';
 import 'auto_dispose_modifier_screen.dart';
 import 'family_modifier_screen.dart';
 import 'listen_provider_screen.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpodv2_gorouter/common/layout/default_layout.dart';
-import 'package:riverpodv2_gorouter/riverpod/provider/provider.dart';
-import 'package:riverpodv2_gorouter/riverpod/provider/state_notifier_provider.dart';
+import 'package:riverpod_gorouter/common/layout/default_layout.dart';
+import 'package:riverpod_gorouter/riverpod/provider/provider.dart';
+import 'package:riverpod_gorouter/riverpod/provider/state_notifier_provider.dart';
 
 class ProviderScreen extends ConsumerWidget {
   const ProviderScreen({Key? key}) : super(key: key);

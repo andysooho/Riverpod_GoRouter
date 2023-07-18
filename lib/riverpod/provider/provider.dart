@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpodv2_gorouter/riverpod/provider/state_notifier_provider.dart';
+import 'package:riverpod_gorouter/riverpod/provider/state_notifier_provider.dart';
 
 final filteredShoppingListProvider = Provider((ref) {
   final sProvider = ref.watch(shoppingListProvider);

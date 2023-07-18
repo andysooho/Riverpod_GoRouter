@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpodv2_gorouter/riverpod/model/shopping_item_model.dart';
+import 'package:riverpod_gorouter/riverpod/model/shopping_item_model.dart';
 
 //final shoppingListProvider = StateNotifierProvider((ref) => ShoppingListNotifier());
 final shoppingListProvider = StateNotifierProvider<ShoppingListNotifier,List<ShoppingItemModel>>
