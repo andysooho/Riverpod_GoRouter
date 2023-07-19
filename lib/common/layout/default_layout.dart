@@ -18,6 +18,7 @@ class DefaultLayout extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         actions: actions,
+        backgroundColor: const Color(0xFFED93FF),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

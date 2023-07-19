@@ -5,6 +5,7 @@ import 'package:riverpod_gorouter/riverpod/screen/state_notifier_provider_screen
 import 'package:riverpod_gorouter/riverpod/screen/state_provider_screen.dart';
 import 'package:riverpod_gorouter/riverpod/screen/stream_provider_screen.dart';
 import 'auto_dispose_modifier_screen.dart';
+import 'code_generation_screen.dart';
 import 'family_modifier_screen.dart';
 import 'listen_provider_screen.dart';
 import 'provider_screen.dart';
@@ -16,9 +17,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-      title: 'HomeScreen',
+      title: 'Riverpod HomeScreen',
       body: ListView(
+        padding: const EdgeInsets.all(10),
         children: const [
+          _NewTitle(title:'Provider'),
           _NewButton(title:'StateProviderScreen', screen: StateProviderScreen()),
           _NewButton(title:'StateNotifierProviderScreen', screen: StateNotifierProviderScreen()),
           _NewButton(title: 'FutureProviderScreen', screen: FutureProviderScreen()),
@@ -28,10 +31,30 @@ class HomeScreen extends StatelessWidget {
           _NewButton(title: 'ListenProviderScreen', screen: ListenProviderScreen()),
           _NewButton(title: 'SelectProviderScreen', screen: SelectProviderScreen()),
           _NewButton(title: 'ProviderScreen', screen: ProviderScreen()),
-          _NewButton(title: 'FamilyModifierScreen', screen: FamilyModifierScreen()),
+          SizedBox(height: 20,),
+          _NewTitle(title:'Code Generation'),
+          _NewButton(title: 'CodeGenerationScreen', screen: CodeGenerationScreen()),
         ],
       ),
     );
+  }
+}
+
+class _NewTitle extends StatelessWidget {
+  final String title;
+
+  const _NewTitle({
+    super.key,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(title,
+    style: const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ) ,);
   }
 }
 
@@ -53,7 +76,10 @@ class _NewButton extends StatelessWidget {
           MaterialPageRoute(builder: (_) => screen)
         );
       },
-      child: Text(title),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color(0xFF774A80),
+      ),
+      child: Text(title)
     );
   }
 }
