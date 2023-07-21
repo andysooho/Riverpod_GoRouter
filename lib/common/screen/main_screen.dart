@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:riverpod_gorouter/common/layout/default_layout.dart';
 import 'package:riverpod_gorouter/riverpod/screen/home_screen.dart';
 
@@ -8,7 +9,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-      title: "MainScreen",
+      title: "MainScreen, ${GoRouterState.of(context).location}",
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -36,12 +37,7 @@ class MainScreen extends StatelessWidget {
           const SizedBox(height: 20,),
           ElevatedButton(
             onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
-                ),
-              );
+              context.go('/root');
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_gorouter/common/screen/main_screen.dart';
 import 'package:riverpod_gorouter/riverpod/provider/provider_observer.dart';
+
+import 'common/router/router.dart';
 
 void main() {
   runApp(
@@ -20,8 +21,8 @@ class _App extends StatelessWidget {
       observers: [
         Logger(),
       ],
-      child: const MaterialApp(
-        home: MainScreen(),
+      child: MaterialApp.router(
+        routerConfig: router,
       ),
     );
   }
